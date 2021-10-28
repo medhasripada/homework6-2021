@@ -89,16 +89,16 @@ header {
         flex-direction: column;
     }
 
-    @media (prefers-reduced-motion){
-        .logo{
-            animation-name: mymove;
+    @media screen and (prefers-reduced-motion:reduce){
+        #logo{
+            animation: none;
+        }
     }
-    
     @media print{
-
         body{
             background-image: none;
         }
+    
 
         .nav{
         display: flex;
@@ -126,3 +126,4 @@ header {
         .gallery{
             content-visibility: hidden;
         }
+    }
