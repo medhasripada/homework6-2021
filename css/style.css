@@ -80,10 +80,9 @@ header {
     body > header{
      flex-direction: row;
      justify-content: space-between;
-     align-items: center;
-     position: sticky;
-     top:0px;
-     width:100%;
+     align-content: flex-start;
+     left:0;
+     right:0;
             
     }
 
@@ -105,23 +104,23 @@ header {
     @media print{
         body{
             background-image: none;
+
         }
     
 
         .nav{
-        display: flex;
-        align-items: center;
         width:100%;
         }
 
         .nav_links{
+        width:100%;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         }
 
         .pricing{
-            position: absolute;
-            bottom:0;
+        flex-direction: row;
+        align-items: flex-end;
 
         }
 
@@ -131,11 +130,20 @@ header {
 
         }
 
+        .card ul li:nth-child(odd):before{
+            content: "\1F44D";
+        }
+
+        .card ul li:nth-child(even):after{
+            content: "\1F44D";
+        }
+
         .gallery{
             display:none;
         }
-        
+
         #gallery{
             display:none;
         }
     }
+    
