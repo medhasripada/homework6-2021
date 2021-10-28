@@ -6,7 +6,7 @@ body{
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
 }
@@ -81,7 +81,7 @@ header {
      flex-direction: row;
      justify-content: space-between;
      align-items: center;
-     position: fixed;
+     position: sticky;
      top:0px;
      width:100%;
             
@@ -89,6 +89,7 @@ header {
 
     .nav_links{
         display:flex;
+        flex-direction: row;
     }
 
     .card{
@@ -131,6 +132,10 @@ header {
         }
 
         .gallery{
-            content-visibility: hidden;
+            display:none;
+        }
+        
+        #gallery{
+            display:none;
         }
     }
