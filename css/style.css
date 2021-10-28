@@ -1,0 +1,128 @@
+body{
+    font-family: "Alegreya Sans SC", "serif";
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_links:visited{
+    color: inherit;
+}
+
+.card > header{
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius:7px;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    flex-basis: 450px;
+    flex-direction: column;
+}
+
+.gallery{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+}
+
+.gallery > img {
+    border: 10px solid #50C7C7;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    margin-right:10px;
+    width: 300px;
+}
+
+@keyframes mymove{
+    from{
+        width:50px;
+        opacity:0;
+    }
+    to{
+        width:425px;
+        opacity:1;
+    }
+}
+
+#logo{
+    animation-name: mymove;
+    animation-duration: 5s;
+}
+
+@media screen and (min-width: 850px){
+    body > header{
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     top:0px;
+     width:100%;
+            
+    }
+
+    .nav_links{
+        display:flex;
+    }
+
+    .card{
+        flex-basis: 250px;
+        flex-direction: column;
+    }
+
+    @media (prefers-reduced-motion){
+        .logo{
+            animation-name: mymove;
+    }
+    
+    @media print{
+
+        body{
+            background-image: none;
+        }
+
+        .nav{
+        display: flex;
+        align-items: center;
+        width:100%;
+        }
+
+        .nav_links{
+        flex-direction: row;
+        justify-content: space-between;
+        }
+
+        .pricing{
+            position: absolute;
+            bottom:0;
+
+        }
+
+        .card{
+            border: 2px solid #45ADDD;
+            flex-basis: 250px;
+
+        }
+
+        .gallery{
+            content-visibility: hidden;
+        }
